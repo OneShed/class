@@ -1,28 +1,44 @@
 #!/usr/bin/perl
-#
-# Class template
-#
+
+=head1 NAME
+
+Class.pm
+
+=head1 DESCRIPTION
+
+Simple class template.
+
+=cut
+
+use 5.006;
+use strict;
+use warnings;
 
 package Class;
 
 sub new {
-    my ( $self, $name, $id ) = @_;
+    my( $self, $name, $id ) = @_;
     my( $class ) = {};
     bless( $class );
 
-    $class->{"name"} = $name;
-    $class->{"id"}   = $id;
+    $class->{'name'} = $name;
+    $class->{'id'}   = $id;
     return $class;
 }
 
 sub get_id {
     my( $self ) = @_;
-    return $self->{"id"};
+    return $self->{'id'};
 } 
 
 sub get_name {
     my( $self ) = @_;
-    return $self->{"name"};
+    return $self->{'name'};
+}
+
+sub set_name {
+    my( $self, $name ) = @_;
+    $self->{'name'} = $name;
 }
 1;
 
