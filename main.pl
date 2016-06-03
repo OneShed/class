@@ -15,3 +15,5 @@ merged the crap
 change 2 on master
 
 change 2 on branch
+
+change 3 on master
